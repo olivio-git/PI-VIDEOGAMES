@@ -1,0 +1,10 @@
+.current-page .page-link {
+  background-color:yellow;
+}
+.bt:hover{
+  color: aquamarine;
+}
+.active{
+  border: 1px solid transparent;
+  color:yellow;
+}

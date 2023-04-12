@@ -1,0 +1,474 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #233142; 
+}
+/*DEFECTOS BTN*/
+.btn{
+  font-weight: 400;
+  font-size: 25px;
+  background-color: crimson;
+  border: none;
+  width:300px;
+  height: 50px;
+  transition: .4s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color:mediumspringgreen;
+  color: whitesmoke;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+  float: left;
+  /* padding: 15px; */
+  /* border: 1px solid red; */
+}
+/* Home */
+
+/* Landing page */
+.landing-page{
+  background-blend-mode: rgba(45,45,45,0.8);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  /* Background gradiente */
+  background: #141E30;
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+  background: linear-gradient(to right, #243B55, #141E30); 
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+.cont-png{
+  padding: 20px;
+}
+.landing-img{
+  background-image: url('./assets/skeletor.png');
+  background-blend-mode:luminosity;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width:70%;
+  height:80vh;
+
+  transform: translate(-10%, -0%);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translate(-10%, -0%);
+  }
+  50% {
+    transform: translate(-10%, -10%);
+  }
+  100% {
+    transform: translate(-10%, -0%);
+  }
+}
+
+.container-banner{/*El contenedor del banner*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  height: 87vh;
+  gap: 100px;
+}
+.landing-banner{ /*El banner*/
+  text-align: center;
+  padding:20px;
+  width: 400px;
+  min-height: 50vh;
+  box-shadow: 7px 7px 3px 2px;
+  background-color: whitesmoke;
+  background-blend-mode: darken;
+  gap:20px;
+}
+.span-png h1{    /*La imagen GAMER*/
+  font-family:monospace;
+}
+.png-banner{    /*Imagen tematica*/
+  width: 200px;
+  height: 180px;
+}
+.text-scroll {
+  overflow: hidden; /* oculta todo el contenido que se salga del elemento */
+}
+.text-scroll p{
+  font-family: monospace;
+  white-space: nowrap; /* asegura que el texto no se rompa en varias líneas */
+  overflow: hidden; /* oculta todo el contenido que se salga del elemento */
+  animation: scroll-text 11s linear infinite; /* animación para el desplazamiento del texto */
+}
+
+@keyframes scroll-text {
+  from {
+    text-indent: 100%; /* empieza con todo el texto oculto */
+  }
+  to {
+    text-indent: -100%; /* mueve el texto hacia la izquierda, revelando letra por letra */
+  }
+}
+
+/* Styles del contador */
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+  padding: 20px;
+}
+/* Styles del card */
+.card{
+  /* border: 1px solid green; */
+  min-height: 300px;
+  padding: 30px;
+  font-family:'Courier New', Courier, monospace;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+.card-title{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:center;
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 8px;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color:rgba(45, 45, 45, 0.3);
+}
+.card-title:hover{
+  cursor: pointer;
+  background-color:rgba(45, 45, 45, 0.7);
+}
+.card-text{
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  color:aqua;
+  border-radius: 15px;
+  background-color:rgba(45, 45, 45, 0.3);
+}
+.card-text:hover{
+  cursor: pointer;
+  background-color:rgba(45, 45, 45, 0.7);
+}
+.btn-link{
+  text-decoration: none;
+  color: black;
+}
+.btn-view-more{
+  border: none;
+  height: 25px;
+  width: 80px;
+  background-color: crimson;
+}
+.btn-view-more:hover{
+  background-color:aqua;
+}
+
+/* Styles del navbar */
+.navbar{
+  font-family: monospace;
+  font-size: 15px;
+  padding:5px;
+  background: #272343;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.logo{
+  color: white;
+  display: flex;
+  position:relative;
+  width: 60px;
+}
+.navbar ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin:  auto;
+  list-style: none;
+}
+
+.bt{
+  border: 1px solid transparent;
+  color: gray;
+  text-decoration: none;
+  padding: 10px;
+}
+.bt-ini{
+  font-size: 20px;
+}
+/* Styles de los contenedores de details */
+.container-one{
+  padding: 30px;
+  min-height: 75vh;
+}
+.container-two{
+  min-height: 75vh;
+}
+.name-rating-description{
+  padding: 10px;
+  gap:20px;
+}
+.container-two p,h1{
+  color:whitesmoke;
+  font-family: monospace;
+}
+
+.container-two label{
+  font-size:40px;
+  color:whitesmoke;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ct-mid{
+  padding: 20px;
+}
+/* Styles de la tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: monospace;
+  border: 1px solid white;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  color: whitesmoke;
+  background-color:transparent;
+}
+td:hover{
+  cursor: pointer;
+  color: black;
+}
+th {
+  background-color:green;
+  color: white;
+}
+.editDelet{
+  border: none;
+  border-radius:5px;
+  width: 50px;
+  background-color: red;
+}
+.editDelet:hover, .deletEit:hover{
+  background-color:aqua;
+  cursor: pointer;
+}
+.deletEit{
+  border: none;
+  border-radius:5px;
+  width: 50px;
+  background-color: yellow;
+}
+/* Styles de rating */
+.star-filled{
+  display: inline-block;
+  font-size: 2.5rem;
+  color: yellow;
+}
+.star-empty{
+  display: inline-block;
+  font-size: 2.5rem;
+  color: whitesmoke;
+}
+/* container search select */
+.container-search-select{
+  color: whitesmoke;
+  font-family:monospace;
+  font-size:15px;
+  padding: 10px;
+  gap:20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.search{
+  width: 15%;
+  height: 2rem;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding:10px;
+}
+.select{
+  font-family: fantasy;
+  font-size: 13px;
+  background-color:aqua;
+  outline: none;
+  border: none;
+  height:2rem;
+  border-radius: 2rem;
+  transition:.3s all;
+}
+.select:active{
+  border-radius: 0;
+}
+.select option{
+  background-color: whitesmoke;
+}
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7986cb;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Spinner y Paginacion */
+.spin-pag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.spin-pag ul{
+  gap: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.spin-pag button{
+  outline:#141E30;
+  border:none;
+  border-radius:1rem;
+  height: 2rem;
+  width:2rem;
+}
+.spin-pag button:hover{
+  background-color:cyan;
+}
+/* container form */
+.container-form-navbar-footer{
+  color: white;
+  font-family: fantasy;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.form{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 40rem;
+  min-height: 75vh;
+  border-radius: 2rem;
+}
+.form input{
+  padding: 1rem;
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  outline: none;
+  border:none;
+}
+#register{
+  font-family: fantasy;
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  outline: none;
+  border:none;
+}
+.container-form{
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.success-input{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.success{
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 20px;
+  color:whitesmoke;
+  width: 20%;
+  background-color:limegreen;
+  height: 30px;
+  padding: 4px;
+}
+.err-input{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+}
+.error{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  color:red;
+  font-size: 15px;
+}
+/* Listar borrar editar */
+.container-list{
+  min-height:80vh;
+}
+/* footer */
+.footer{
+  margin-top: 20px;
+  height: 10vh;
+  background-color:#17202A;
+}
+.platforms-genres{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.platforms-genres label{
+  color: aqua;
+}
+.videogames{
+  color: black;
+}
