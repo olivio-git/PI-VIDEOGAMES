@@ -10,7 +10,7 @@ import {
   FILTER_GENRE
 } from './actionsType';
 export function getAllVideogames(page,from){
-    let url = `http://localhost:3001/videogames/page/${page}?from=${from}`;
+    let url = `https://api-production-e030.up.railway.app/videogames/page/${page}?from=${from}`;
     return function(dispatch){
         return axios.get(url)
         .then((response)=>{
@@ -38,7 +38,7 @@ export function updateFiltroSort(order){
 }
 export function postVideogames(newVideogame) {
     return function(dispatch) {
-      return axios.post('http://localhost:3001/videogames', newVideogame)
+      return axios.post('https://api-production-e030.up.railway.app/videogames', newVideogame)
         .then((response) => {
           dispatch({
             type: POST_VIDEOGAMES,
@@ -48,7 +48,7 @@ export function postVideogames(newVideogame) {
     }
 };
 export function getVideogameName(name,from){
-  let url=`http://localhost:3001/videogames/${name}?from=${from}`;
+  let url=`https://api-production-e030.up.railway.app/videogames/${name}?from=${from}`;
 
   return function(dispatch){
     return axios.get(url)
@@ -61,7 +61,7 @@ export function getVideogameName(name,from){
   }
 }
 export function getVideogameId(id){
-  let url=`http://localhost:3001/videogames/id/${id}`;
+  let url=`https://api-production-e030.up.railway.app/videogames/id/${id}`;
   return function(dispatch){
     return axios.get(url)
     .then((response)=>{
@@ -73,7 +73,7 @@ export function getVideogameId(id){
   }
 };
 export function deleteVideogame(id){
-  let url=`http://localhost:3001/videogames/${id}`
+  let url=`https://api-production-e030.up.railway.app/videogames/${id}`
   return function(dispatch){
     return axios.delete(url)
     .then(()=>{
@@ -85,7 +85,7 @@ export function deleteVideogame(id){
   }
 }
 export function filterGenre(type){
-  let url=`http://localhost:3001/videogames/sort/${type}`;
+  let url=`https://api-production-e030.up.railway.app/videogames/sort/${type}`;
   return function(dispatch){
     return axios.get(url)
     .then((response)=>{

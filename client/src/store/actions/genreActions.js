@@ -3,7 +3,7 @@ import { GET_GENRES } from './actionsType';
 
 export function getGenres(){
     return function(dispatch){
-        return axios.get('http://localhost:3001/genres/')
+        return axios.get('https://api-production-e030.up.railway.app/genres/')
         .then((response)=>{
             dispatch({
                 type:GET_GENRES,
